@@ -16,7 +16,6 @@ Working on **Stretch3 AI**, implementing state-of-the-art RL methods such as **D
   - **Perception (point-cloud from 2D images)**
   - **Depth-map generation (gripper camera & sensors)**
 
----
 
 ### 🗓️ **Jan 13, 2025** – Installing & Testing `stretch_ai`
 - Debugged **StretchAI** installation (NVIDIA drivers, CUDA, dependencies).
@@ -24,14 +23,12 @@ Working on **Stretch3 AI**, implementing state-of-the-art RL methods such as **D
 - Verified **deep perception models** (face/object detection).
 - Started working on **`ai_pickup` (language-directed pick & place feature).**
 
----
 
 ### 🗓️ **Jan 20, 2025** – Understanding `stretch_ai`
 - Implemented **custom pickup functions** for **identifying and navigating to a Red Button**.
 - Explored how **StretchAI agent** generates robot instructions from natural language.
 - Began debugging **button press navigation errors**.
 
----
 
 ### 🗓️ **Jan 27, 2025** – Pressing the Red Button
 - Addressed **object detection issues** with **Detic + CLIP**.
@@ -39,7 +36,6 @@ Working on **Stretch3 AI**, implementing state-of-the-art RL methods such as **D
   - **AnyGrasp (IP protected)**
   - **Opensource alternatives: GraspNet, Graspness**
 
----
 
 ### 🗓️ **Feb 03, 2025** – Open-Loop vs. Closed-Loop Policies
 - Developed **two methods** for pressing the Red Button:
@@ -47,12 +43,10 @@ Working on **Stretch3 AI**, implementing state-of-the-art RL methods such as **D
   - **Closed-loop approach:** Uses **Detic + CLIP** for adaptive behavior.
 - Started working on **Dexterous Teleop Kit** for **training RL policies**.
 
----
 
 ### 🗓️ **Feb 10, 2025** – Dex Teleop & Diffusion Policy
 - Built **Dexterous Teleop Kit** for RL policy training.
 
----
 
 ### 🗓️ **Feb 17, 2025** – Understanding Diffusion Policy
 - Studied the **Diffusion Policy** paper.
@@ -61,7 +55,6 @@ Working on **Stretch3 AI**, implementing state-of-the-art RL methods such as **D
   - Available for **LeRobot**, but not for **Stretch3**.
   - Began **adapting LeRobot’s implementation** for Stretch3.
 
----
 
 ### 🗓️ **Feb 24, 2025** – Noising-Denoising Process in Diffusion Policy
 - Set up **Dex-teleop** on PC & robot.
@@ -69,7 +62,6 @@ Working on **Stretch3 AI**, implementing state-of-the-art RL methods such as **D
 - Understood **Diffusion Policy’s noising-denoising process**.
 - Began **robot teleoperation data collection**.
 
----
 
 ### 🗓️ **Mar 03, 2025** – VQ-BeT & Camera Calibration
 - **Calibrated Logitech-Webcam-C930e** for **Dex Teleop**.
@@ -77,7 +69,6 @@ Working on **Stretch3 AI**, implementing state-of-the-art RL methods such as **D
 - Started implementing **Diffusion Policy for Stretch3**.
 - **Collected human demonstration data** for "Press Button" task.
 
----
 
 ### 🗓️ **Mar 09, 2025** – Training Stretch3 on Diffusion Policy
 - **Collecting 30+ teleop demonstrations** for policy training.

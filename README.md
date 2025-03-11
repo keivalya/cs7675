@@ -80,8 +80,8 @@ Working on **Stretch3 AI**, implementing state-of-the-art RL methods such as **D
 ---
 
 ### 🗓️ **Mar 09, 2025** – Training Stretch3 on Diffusion Policy
-- **Collected 30+ teleop demonstrations** for policy training.
-- Implemented **Diffusion Policy adaptation** for Stretch3 based on **LeRobot’s implementation**.
+- **Collecting 30+ teleop demonstrations** for policy training.
+- Implementing **Diffusion Policy adaptation** for Stretch3 based on **LeRobot’s implementation**.
 
 ---
 

@@ -13,7 +13,10 @@ Working on **Stretch3 AI**, implementing state-of-the-art RL methods such as **D
 1. Collecting **Demonstration Data** for various tasks: push button, press elevator button, open the door, fill the water bottle.
 2. Training the robot using **Diffusion Policy**
 
-[![Demonstration Data Collection](https://img.youtube.com/vi/pWlPxv_wNfI/maxresdefault.jpg)](https://youtu.be/pWlPxv_wNfI?si=ufYcWC_4mbAeD--O)
+[![Demonstration Data Collection](https://img.youtube.com/vi/pWlPxv_wNfI/0.jpg)](https://youtu.be/pWlPxv_wNfI?si=ufYcWC_4mbAeD--O)
+[![Dexterous Manipulation](https://img.youtube.com/vi/VRWaP2HtgCc/0.jpg)](https://youtu.be/VRWaP2HtgCc)
+
+
 
 ---
 

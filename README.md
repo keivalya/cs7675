@@ -7,6 +7,16 @@ Working on **Stretch3 AI**, implementing state-of-the-art RL methods such as **D
 
 ---
 
+
+### Currently :- 
+
+1. Collecting **Demonstration Data** for various tasks: push button, press elevator button, open the door, fill the water bottle.
+2. Training the robot using **Diffusion Policy**
+
+[![Demonstration Data Collection](https://img.youtube.com/vi/pWlPxv_wNfI/maxresdefault.jpg)](https://youtu.be/pWlPxv_wNfI?si=ufYcWC_4mbAeD--O)
+
+---
+
 ## Weekly Progress
 
 ### 🗓️ **Jan 06, 2025** – Getting Started with Stretch3

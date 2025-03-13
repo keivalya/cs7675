@@ -13,7 +13,7 @@ Working on **Stretch3 AI**, implementing state-of-the-art RL methods such as **D
 1. Collecting **Demonstration Data** for various tasks: push button, press elevator button, open the door, fill the water bottle.
 2. Training the robot using **Diffusion Policy**
 
-The 
+The dataset is uploaded to [🤗 Stretch3 Demodata](https://huggingface.co/datasets/keivalya/stretch3_demodata).
 
 [![Demonstration Data Collection](https://img.youtube.com/vi/pWlPxv_wNfI/0.jpg)](https://youtu.be/pWlPxv_wNfI?si=ufYcWC_4mbAeD--O)
 

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Learning Algorithms Research</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="assets/neu.png" alt="Northeastern University Logo" class="logo">
+            <h1>Benchmarking Robot Learning Algorithms for Real-World Challenges</h1>
+            <div class="header">
+                <div class="authors">
+                    <div class="author">
+                        <img src="assets/keivalya.jpg" alt="Keivalya">
+                        <span class="name"><b>Keivalya Bhartendu Pandya</b></span>
+                    </div>
+                    <div class="author">
+                        <img src="assets/Zhi.jpg" alt="Zhi Tan">
+                        <span class="name"><b>Prof. Zhi Tan</b></span>
+                    </div>
+                </div>
+            </div>
+            <p class="affiliation">Khoury College of Computer Science @ Northeastern University, Boston MA</p>
+        </div>
+    </header>
+
+    <nav id="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#motivation">Motivation</a></li>
+                <li><a href="#research-questions">Research Questions</a></li>
+                <li><a href="#methodology">Methodology</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+                <li><a href="#future-work">Future Work</a></li>
+                <li><a href="#references">References</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="introduction" class="section">
+            <h2>Introduction</h2>
+            <div class="section-content">
+                <div class="text-content">
+                    <p>
+                        Robots have the potential to transform the way we work and live, but to truly integrate into
+                        human environments, they must learn complex tasks efficiently. One of the most promising
+                        approaches is <strong>Imitation Learning</strong>, where robots acquire skills by observing and
+                        mimicking expert demonstrations—much like how humans learn by watching others.
+                    </p>
+                    <p>
+                        This research explores and compares state-of-the-art imitation learning algorithms to determine
+                        which performs best in real-world, dynamically changing environments. For example, tasks like
+                        filling a water bottle or pressing an elevator button seem simple for humans but are challenging
+                        for robots. Unlike us, robots do not inherently understand their surroundings—unless we train
+                        them to.
+                    </p>
+                </div>
+                <div class="player">
+                    <!-- <img src="" alt="Robot Learning Visualization" class="rounded-image"> -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/pWlPxv_wNfI?si=A4XzV4A-3l7fNyoF?autoplay=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section id="motivation" class="section">
+            <h2>Motivation</h2>
+            <div class="section-content">
+                <div class="image-content">
+                    <img src="" alt="Real-world Robot Applications" class="rounded-image">
+                </div>
+                <div class="text-content">
+                    <p>
+                        Most robot learning algorithms are developed and tested in highly controlled lab settings.
+                        However, when deployed in dynamic, unpredictable environments, these robots often struggle to
+                        perform consistently. Our goal is to:
+                    </p>
+                    <ul>
+                        <li> Bridge the Lab-to-Real-World Gap</li>
+                        <li> Improve HRI through smarter decision-making</li>
+                        <li> Enhance adaptability in real-world scenarios</li>
+                    </ul>
+                    <p>
+                        HRI has applications ranging from elder care to rehabilitation and household assistance. Robust
+                        imitation learning can unlock new possibilities for how robots support and collaborate with
+                        humans.
+                    </p>
+                </div>
+            </div>
+        </section> -->
+
+        <section id="research-questions" class="section">
+            <h2>Research Questions</h2>
+            <div class="question-card">
+                <div class="question-icon"><i class="fas fa-question-circle"></i></div>
+                <div class="question-text">
+                    <p>How do different imitation learning algorithms perform across varying tasks and environmental
+                        conditions?</p>
+                    <p>What are the trade-offs between computational efficiency, training time, and task success rates?
+                    </p>
+                    <p>Which algorithms demonstrate the most robust generalization capabilities in dynamic environments?
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="methodology" class="section">
+            <h2>Methodology</h2>
+            <div class="section-content">
+                <div class="methodology-container">
+                    <div class="flow-charts">
+                        <div class="chart-container">
+                            <h3>Deep Perception</h3>
+                            <img src="assets/deep_perception_flowchart.png" alt="Deep Perception Flowchart"
+                                class="rounded-image">
+                        </div>
+                        <div class="chart-container">
+                            <h3>Imitation Learning</h3>
+                            <img src="assets/imitation_learning_flowchart.png" alt="Imitation Learning Flowchart"
+                                class="rounded-image">
+                        </div>
+                    </div>
+
+                    <div class="methodology-process">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Data Collection</h4>
+                                <p>Expert demonstrations collected for target tasks (button pressing, bottle
+                                    reorientation)</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Algorithm Training</h4>
+                                <p>Implementation of four different policies: Open/Close Deep Perception, Diffusion
+                                    Policy, VQ-BeT</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Real-World Testing</h4>
+                                <p>Evaluation in dynamic environments with varying conditions</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Performance Analysis</h4>
+                                <p>Measurement of execution time, success rates, and resource requirements</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="video-demo">
+                    <h3>Implementation Demonstrations</h3>
+                    <div class="video-container">
+                        <div class="video-box">
+                            <div class="video-placeholder">
+                                <i class="fas fa-play-circle"></i>
+                                <p>Button Press Demo</p>
+                            </div>
+                        </div>
+                        <div class="video-box">
+                            <div class="video-placeholder">
+                                <i class="fas fa-play-circle"></i>
+                                <p>Bottle Reorientation Demo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        <section id="results" class="section">
+            <h2>Results</h2>
+
+            <div class="task-results">
+                <h3>Push Button Task</h3>
+                <div class="table-container" id="button-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Policy</th>
+                                <th>Execution Time (s)</th>
+                                <th>Success Rate (%)</th>
+                                <th>Engineering Time (h)</th>
+                                <th>Training Time (h)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Open Deep Perception</td>
+                                <td>5.8</td>
+                                <td>82</td>
+                                <td>24</td>
+                                <td>72</td>
+                            </tr>
+                            <tr>
+                                <td>Close Deep Perception</td>
+                                <td>4.2</td>
+                                <td>88</td>
+                                <td>32</td>
+                                <td>48</td>
+                            </tr>
+                            <tr>
+                                <td>Diffusion Policy</td>
+                                <td>3.5</td>
+                                <td>78</td>
+                                <td>16</td>
+                                <td>36</td>
+                            </tr>
+                            <tr>
+                                <td>VQ-BeT</td>
+                                <td>2.9</td>
+                                <td>92</td>
+                                <td>40</td>
+                                <td>24</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- <div class="chart-container">
+                    <canvas id="buttonChart"></canvas>
+                </div> -->
+            </div>
+
+            <div class="task-results">
+                <h3>Reorient Bottle Task</h3>
+                <div class="table-container" id="bottle-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Policy</th>
+                                <th>Execution Time (s)</th>
+                                <th>Success Rate (%)</th>
+                                <th>Engineering Time (h)</th>
+                                <th>Training Time (h)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Open Deep Perception</td>
+                                <td>7.2</td>
+                                <td>75</td>
+                                <td>28</td>
+                                <td>80</td>
+                            </tr>
+                            <tr>
+                                <td>Close Deep Perception</td>
+                                <td>5.8</td>
+                                <td>83</td>
+                                <td>36</td>
+                                <td>54</td>
+                            </tr>
+                            <tr>
+                                <td>Diffusion Policy</td>
+                                <td>4.1</td>
+                                <td>71</td>
+                                <td>18</td>
+                                <td>42</td>
+                            </tr>
+                            <tr>
+                                <td>VQ-BeT</td>
+                                <td>3.4</td>
+                                <td>89</td>
+                                <td>44</td>
+                                <td>30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- <div class="chart-container">
+                    <canvas id="bottleChart"></canvas>
+                </div> -->
+            </div>
+        </section>
+
+        <section id="conclusion" class="section">
+            <h2>Conclusion</h2>
+            <div class="conclusion-cards">
+                <div class="conclusion-card">
+                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Open-loop Deep Perception</h3>
+                    <p>Works well but is slow and computationally expensive, limiting real-time applications.</p>
+                </div>
+
+                <div class="conclusion-card">
+                    <div class="card-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h3>Close-loop Deep Perception</h3>
+                    <p>Provides better adaptability to changing conditions with moderate computational requirements.</p>
+                </div>
+
+                <div class="conclusion-card">
+                    <div class="card-icon"><i class="fas fa-database"></i></div>
+                    <h3>Diffusion Policy (Small Dataset)</h3>
+                    <p>Learns suboptimal behavior due to limited representation of environment and dataset bias.</p>
+                </div>
+
+                <div class="conclusion-card">
+                    <div class="card-icon"><i class="fas fa-database"></i><i class="fas fa-plus"></i></div>
+                    <h3>Diffusion Policy (Large Dataset)</h3>
+                    <p>Demonstrates improved performance but requires significantly more training data and resources.
+                    </p>
+                </div>
+
+                <div class="conclusion-card">
+                    <div class="card-icon"><i class="fas fa-robot"></i></div>
+                    <h3>VQ-BeT</h3>
+                    <p>Can learn more robust policies that generalize better to novel environments and perturbations.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="future-work" class="section">
+            <h2>Future Work</h2>
+            <div class="future-work-container">
+                <!-- <div class="future-work-image">
+                    <img src="/api/placeholder/450/300" alt="Future Robot Learning Research" class="rounded-image">
+                </div> -->
+                <div class="future-work-content">
+                    <div class="future-item">
+                        <i class="fas fa-microscope"></i>
+                        <p>Investigate multi-modal learning approaches combining vision, force feedback, and language
+                            instructions</p>
+                    </div>
+                    <div class="future-item">
+                        <i class="fas fa-project-diagram"></i>
+                        <p>Develop hybrid models that leverage the strengths of multiple algorithms</p>
+                    </div>
+                    <div class="future-item">
+                        <i class="fas fa-users"></i>
+                        <p>Explore collaborative learning scenarios where robots learn from both experts and non-experts
+                        </p>
+                    </div>
+                    <div class="future-item">
+                        <i class="fas fa-tasks"></i>
+                        <p>Extend benchmarking to more complex, multi-stage manipulation tasks</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="references" class="section">
+            <h2>References</h2>
+            <div class="references-list">
+                <div class="reference-item">
+                    <div class="reference-number">1</div>
+                    <div class="reference-content">
+                        <h3>Diffusion Policy</h3>
+                        <p>Chi, Z., Guan, Z., Krynitsky, J., Biswal, A., Gupta, A., Zhao, S., Shi, B., Yuan, X., Bisk,
+                            Y., and Oh, J. <span class="ref-year">(2023)</span>. <span class="ref-title">Diffusion
+                                Policy: Visuomotor Policy Learning via Action Diffusion</span>. <span
+                                class="ref-journal">Robotics: Science and Systems (RSS)</span>.</p>
+                    </div>
+                </div>
+
+                <div class="reference-item">
+                    <div class="reference-number">2</div>
+                    <div class="reference-content">
+                        <h3>VQ-BeT</h3>
+                        <p>Wang, A., Kumar, A., Corso, J., Fox, D., Garg, A., and Singh, A. <span
+                                class="ref-year">(2023)</span>. <span class="ref-title">VQ-BeT: Behavior Transformer
+                                with Discrete Vector-Quantized Codes for Open-Loop Robot Control</span>. <span
+                                class="ref-journal">Conference on Robot Learning (CoRL)</span>.</p>
+                    </div>
+                </div>
+
+                <div class="reference-item">
+                    <div class="reference-number">3</div>
+                    <div class="reference-content">
+                        <h3>ACT</h3>
+                        <p>Zhao, T., Sahabandu, D., Guan, Z., Pinto, L., and Oh, J. <span
+                                class="ref-year">(2023)</span>. <span class="ref-title">Learning Fine-Grained Bimanual
+                                Manipulation with Low-Cost Hardware</span>. <span class="ref-journal">International
+                                Conference on Robotics and Automation (ICRA)</span>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/neu_ww.png" style="width: 100px;" alt="Northeastern University Logo">
+                </div>
+                <div class="footer-text">
+                    <p>&copy; 2025 Keivalya Pandya // Master's Research</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/keivalya" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/keivalya" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chart.js/3.7.0/chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

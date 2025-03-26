@@ -1,5 +1,5 @@
 /* Base Styles */
-:root {
+/* :root {
     --primary-color: #0077b6;
     --secondary-color: #023e8a;
     --accent-color: #48cae4;
@@ -10,7 +10,21 @@
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --border-radius: 8px;
     --transition: all 0.3s ease;
+} */
+
+:root {
+    --primary-color: #d7261b; /* Bold red matching the title */
+    --secondary-color: #8b0000; /* Dark red for emphasis */
+    --accent-color: #ff6666; /* Lighter red for highlights */
+    --text-color: #333333; /* Dark gray for readability */
+    --light-bg: #ffffff; /* White background */
+    --dark-bg: #1a1a1a; /* Very dark gray for contrast */
+    --card-bg: #f5f5f5; /* Light gray for card backgrounds */
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Slightly darker shadow */
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
 }
+
 
 * {
     margin: 0;
@@ -165,7 +179,6 @@ main {
 .question-text p {
     margin-bottom: 0.5rem;
 }
-
 /* Methodology Section */
 .methodology-container {
     display: flex;
@@ -178,17 +191,55 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    justify-content: space-between;
+    justify-content: center; /* Center charts on small screens */
 }
 
 .chart-container {
     flex: 1 1 45%;
     min-width: 300px;
+    max-width: 100%; /* Ensures it doesn't overflow */
+    overflow: hidden;
+    text-align: center; /* Centers the image */
+}
+
+.chart-container img {
+    width: 100%; /* Makes images responsive */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 100%; /* Prevents overflow */
 }
 
 .chart-container h3 {
     margin-bottom: 1rem;
     color: var(--secondary-color);
+}
+
+/* Responsive Adjustments for Small Screens */
+@media (max-width: 600px) {
+    .flow-charts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chart-container {
+        flex: 1 1 100%;
+        min-width: auto;
+    }
+
+    .methodology-process {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .process-step {
+        flex: 1 1 100%;
+        gap: 0.5rem;
+    }
+
+    .step-number {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
 }
 
 .methodology-process {
@@ -219,7 +270,7 @@ main {
     font-size: 1.2rem;
 }
 
-.video-demo {
+/* .video-demo {
     margin-top: 2rem;
 }
 
@@ -255,7 +306,7 @@ main {
     font-size: 3rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
-}
+} */
 
 /* Results Section */
 .task-results {
@@ -268,20 +319,23 @@ main {
 }
 
 .table-container {
-    overflow-x: auto;
+    overflow-x: auto; /* Enables horizontal scrolling */
     margin-bottom: 2rem;
+    max-width: 100%;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 1.5rem;
+    min-width: 600px; /* Ensures table doesn't shrink too much */
 }
 
 th, td {
     padding: 1rem;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    white-space: nowrap; /* Prevents text from wrapping in small screens */
 }
 
 th {
@@ -295,6 +349,14 @@ tr:nth-child(even) {
 
 tr:hover {
     background-color: #e6f3ff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    th, td {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
 }
 
 /* Conclusion Section */
@@ -493,15 +555,11 @@ footer {
     margin-right: 0.5rem;
     vertical-align: middle;
 } */
-
 .header {
     display: flex;
     align-items: center;
     gap: 20px; /* Space between logo and authors */
-}
-
-.logo {
-    height: 100px; /* Adjust size as needed */
+    flex-wrap: wrap;
 }
 
 .authors {
@@ -526,6 +584,15 @@ footer {
     margin-top: 10px;
     font-size: 1rem;
 }
+
+/* Responsive Design for Small Screens */
+@media (max-width: 600px) {
+    .authors {
+        flex-direction: column; /* Stack authors vertically */
+        gap: 10px;
+    }
+}
+
 
 .player {
     border-radius: 10px;

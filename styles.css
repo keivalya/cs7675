@@ -601,3 +601,31 @@ footer {
     height: 320px;
     width: 480px;
   }
+
+
+/* YouTube Button  */
+.youtube-button {
+margin: 10px;
+/* text-align: center; */
+}
+
+.youtube-button a {
+    display: inline-flex;
+    align-items: center;
+    background-color: #FF0000;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.youtube-button a i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.youtube-button a:hover {
+    background-color: #cc0000;
+}
